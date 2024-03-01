@@ -1,0 +1,84 @@
+
+particlesJS("particles", {
+    particles: {
+      number: {
+        value: 100,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      color: {
+        value: "#000000"
+      },
+      shape: {
+        type: "circle",
+        stroke: {
+          width: 0,
+          color: "#000000"
+        }
+      },
+      opacity: {
+        value: 0.8,
+        random: true,
+        animation: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0,
+          sync: false
+        }
+      },
+      size: {
+        value: 3,
+        random: true
+      },
+      line_linked: {
+        enable: true,distance: 150,
+        color: "#000000",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode:"out",
+        bounce: false, 
+      }
+    },
+    interativity: {
+      detectsOn: "canvas",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "push"
+        },
+        onClick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        repiles: {
+          distance: 100,
+          duration: 0.4
+        },
+        push: {
+          particles_nb: 4
+        }
+      }
+    },
+    retina_detect: true
+
+})
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  /*targeting two elements (the ones above) so that when the hambuger is pressed, it either adds or removes the open class*/
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
